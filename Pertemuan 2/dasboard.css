@@ -24,16 +24,9 @@ body{
     background-size: cover;
 }
 
-.Logo {
-  flex-direction: column;
+.Logo-img {
   width: 100%;
-  overflow-x: hidden;
-}
-
-.Logo-img img {
-  position: relative;
-  width: 1900px;
-  height: 200px;
+  object-fit: cover;
 }
 
 .News {
