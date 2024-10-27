@@ -1,0 +1,187 @@
+/* Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Roboto Condensed';
+}
+
+html {
+    font-size: 60%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Menambahkan ini untuk membuat konten vertikal */
+}
+
+/* Header */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.foto{
+    font-size: 3rem;
+    color: aqua;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 1.0s ease;
+}
+
+.foto:hover{
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: aliceblue;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: aqua;
+    border-bottom: 3px aqua;
+}
+
+/* Hero Section */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Mengurangi lebar untuk membuatnya lebih ke tengah */
+    max-width: 1200px; /* Membatasi lebar maksimum */
+    text-align: center;
+    padding: 2rem 1; /* Menambah padding untuk membuat tampilan lebih lega */
+    margin-top: 100px; /* Menambah margin atas untuk menghindari header */
+}
+
+.hero h1 {
+    font-size: 4rem; /* Membesarkan font title */
+    color: aqua;
+    margin-bottom: 1rem;
+}
+
+/* Courses Section */
+.courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0; /* Menambah padding untuk ruang antar elemen */
+}
+
+.courses h2 {
+    font-size: 3rem;
+    color: aqua;
+    margin-bottom: 2rem;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around; /* Jarak lebih merata antara courses */
+    width: 100%;
+    max-width: 1000px;
+}
+
+.course {
+    width: 30%;
+    padding: 1.5rem;
+    background-color: #222;
+    border-radius: 1rem;
+    transition: 0.3s;
+    text-align: center; /* Membuat text kursus center */
+}
+
+.course:hover {
+    background-color: #333;
+}
+
+.course h3 {
+    font-size: 2rem;
+    color: aqua;
+    margin-bottom: 1rem;
+}
+
+.course p {
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+/* Testimonials Section */
+.testimonials {
+    width: 100%;
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 3rem; /* Memberi jarak antara testimonials dan courses */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    color: aqua;
+    margin-bottom: 1.5rem;
+}
+
+.testimonials p {
+    font-size: 1.6rem;
+    color: aliceblue;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 1rem 0;
+    background-color: #000; /* Sesuaikan dengan warna latar belakang */
+    color: #fff; /* Sesuaikan dengan warna teks */
+}
+
+/* Media Queries */
+@media (max-width: 995px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.6rem;
+    }
+
+    .course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}

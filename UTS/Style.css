@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Roboto Condensed';
+}
+
+html{
+    font-size: 60%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: auto;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.foto{
+    font-size: 3rem;
+    color: aqua;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 1.0s ease;
+}
+
+.foto:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: aliceblue;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:aqua;
+    border-bottom: 3px aqua;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px aqua;
+        border-bottom: 3px aqua;
+        border-bottom-right-radius: 4rem;
+        padding: 1rem solid;
+        background-color: black;
+        border-top: 0.1rem solid black;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid aqua;
+    }
+}
+
+section{
+    min-height: 96.4vh;
+    padding: 5rem 9% 5rem;
+}
+
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.Home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.Home-img{
+    border-radius: 50%;
+}
+
+.Home-img img{
+    position: relative;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid aqua;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.Home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "";
+    color: aqua;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid aqua;
+    }
+}
+
+@keyframes words{
+    0%, 15%{
+        content: "Atlet";
+    }
+    15%, 20%{
+        content: "Football Player";
+    }
+    21%, 40%{
+        content: "Badminton Player";
+    }
+    41%, 80%{
+        content: "Gamers";
+    }
+    81%, 100%{
+        content: "Maling";
+    }
+}
+
+@media(max-width: 1000px){
+    .Home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .Home .Home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .Home-content h1{
+        font-size: 5rem;
+    }
+
+    .Home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
